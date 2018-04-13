@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>easyUI页面布局模板</title>
+    <meta charset="UTF-8">
+    <link id="theme" rel="stylesheet" type="text/css" href="lib/themes/metro-blue/easyui.css">
+    <link rel="stylesheet" type="text/css" href="lib/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="lib/css/demo.css">
+    <script type="text/javascript" src="lib/js/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/js/jquery.easyui.min.js"></script>
+</head>
+<body class="easyui-layout">
+<div data-options="region:'north',border:false"
+     style="height:60px; background-color: #2d3e50; display: table-cell; vertical-align: middle;">
+    <div style="margin: 0 20px;">
+        <div style="font-size: 2em; color: #FFF; width: 200px; float: left;">Easy UI 布局模板</div>
+        <div style="float: right;">
+            <span style="color: #FFF;">主题：</span>
+            <div style="display: inline-block">
+                <select class="easyui-combobox" id="themeSelector" name="themeSelector" labelPosition="top"
+                        style="width: 150px;">
+                    <option value="metro-blue">Metro blue</option>
+                    <option value="bootstrap">bootstrap</option>
+                    <option value="default">default</option>
+                    <option value="gray">gray</option>
+                    <option value="material">material</option>
+                    <option value="metro">Metro default</option>
+                    <option value="metro-gray">Metro gray</option>
+                    <option value="metro-green">Metro green</option>
+                    <option value="metro-orange">Metro orange</option>
+                    <option value="metro-red">Metro red</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div data-options="region:'west',split:true,title:'菜单'" style="width:150px;">
+    <div class="easyui-accordion" data-options="fit:true,border:false">
+        <div title="商品采购" data-options="selected:true">
+            <ul>
+                <li>采购申请单</li>
+                <li>采购订单</li>
+            </ul>
+        </div>
+        <div title="商品库存">
+            <ul>
+                <li>库存查询</li>
+                <li>入库管理</li>
+                <li>出库管理</li>
+            </ul>
+        </div>
+        <div title="商品档案">
+            <ul>
+                <li>商品分类</li>
+                <li>商品档案</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div data-options="region:'east',split:true,collapsed:true,title:'East'" style="width:100px;">east region</div>
+<div data-options="region:'center',title:'Center'">
+    <div style="padding: 5px; position: relative;">
+        <div style="position: absolute">
+            <div class="easyui-tabs" style="width:500px;height:400px;">
+                <div title="About" style="padding:10px">
+                    <p style="font-size:14px">jQuery EasyUI framework helps you build your web pages easily.</p>
+                    <ul>
+                        <li>easyui is a collection of user-interface plugin based on jQuery.</li>
+                        <li>easyui provides essential functionality for building modem, interactive, javascript
+                            applications.
+                        </li>
+                        <li>using easyui you don't need to write many javascript code, you usually defines
+                            user-interface by
+                            writing some HTML markup.
+                        </li>
+                        <li>complete framework for HTML5 web page.</li>
+                        <li>easyui save your time and scales while developing your products.</li>
+                        <li>easyui is very easy but powerful.</li>
+                    </ul>
+                </div>
+                <div title="My Documents" data-options="closable:true" style="padding:10px">
+                    <ul class="easyui-tree" data-options="url:'tree_data1.json',method:'get',animate:true"></ul>
+                </div>
+                <div title="Help" data-options="iconCls:'icon-help',closable:true" style="padding:10px">
+                    This is the help content.
+                </div>
+            </div>
+        </div>
+        <div style="position: absolute; left: 510px;">
+            <div class="easyui-panel" title="Register" style="width:100%;max-width:400px;padding:25px;">
+                <div style="margin-bottom:20px">
+                    <input class="easyui-textbox" label="Email:" labelPosition="top"
+                           data-options="prompt:'Enter a email address...',validType:'email'"
+                           style="width:100%;height:52px">
+                </div>
+                <div style="margin-bottom:20px">
+                    <input class="easyui-textbox" label="First Name:" labelPosition="top"
+                           style="width:100%;height:52px">
+                </div>
+                <div style="margin-bottom:20px">
+                    <input class="easyui-textbox" label="Last Name:" labelPosition="top" style="width:100%;height:52px">
+                </div>
+                <div style="margin-bottom:20px">
+                    <input class="easyui-textbox" label="Company:" labelPosition="top" style="width:100%;height:52px">
+                </div>
+
+                <div>
+                    <a href="#" class="easyui-linkbutton" iconCls="icon-ok" style="width:100%;height:32px">Register</a>
+                </div>
+            </div>
+        </div>
+        <div style="position: absolute; top: 420px;">
+            <table class="easyui-datagrid" title="Basic DataGrid" style="width:910px;height:250px"
+                   data-options="singleSelect:true,collapsible:true,url:'datagrid_data1.json',method:'get'">
+                <thead>
+                <tr>
+                    <th data-options="field:'itemid',width:180">Item ID</th>
+                    <th data-options="field:'productid',width:100">Product</th>
+                    <th data-options="field:'listprice',width:80,align:'right'">List Price</th>
+                    <th data-options="field:'unitcost',width:180,align:'right'">Unit Cost</th>
+                    <th data-options="field:'attr1',width:250">Attribute</th>
+                    <th data-options="field:'status',width:160,align:'center'">Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td data-options="field:'itemid',width:180">Item ID</td>
+                    <td data-options="field:'productid',width:100">Product</td>
+                    <td data-options="field:'listprice',width:180,align:'right'">List Price</td>
+                    <td data-options="field:'unitcost',width:80,align:'right'">Unit Cost</td>
+                    <td data-options="field:'attr1',width:250">Attribute</td>
+                    <td data-options="field:'status',width:160,align:'center'">Status</td>
+                </tr>
+                <tr>
+                    <td data-options="field:'itemid',width:180">Item ID</td>
+                    <td data-options="field:'productid',width:100">Product</td>
+                    <td data-options="field:'listprice',width:180,align:'right'">List Price</td>
+                    <td data-options="field:'unitcost',width:180,align:'right'">Unit Cost</td>
+                    <td data-options="field:'attr1',width:250">Attribute</td>
+                    <td data-options="field:'status',width:160,align:'center'">Status</td>
+                </tr>
+                <tr>
+                    <td data-options="field:'itemid',width:180">Item ID</td>
+                    <td data-options="field:'productid',width:100">Product</td>
+                    <td data-options="field:'listprice',width:180,align:'right'">List Price</td>
+                    <td data-options="field:'unitcost',width:180,align:'right'">Unit Cost</td>
+                    <td data-options="field:'attr1',width:250">Attribute</td>
+                    <td data-options="field:'status',width:160,align:'center'">Status</td>
+                </tr>
+                <tr>
+                    <td data-options="field:'itemid',width:180">Item ID</td>
+                    <td data-options="field:'productid',width:100">Product</td>
+                    <td data-options="field:'listprice',width:180,align:'right'">List Price</td>
+                    <td data-options="field:'unitcost',width:180,align:'right'">Unit Cost</td>
+                    <td data-options="field:'attr1',width:250">Attribute</td>
+                    <td data-options="field:'status',width:160,align:'center'">Status</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</div>
+<div data-options="region:'south',border:false" style="height:30px;">
+    <div style="line-height: 30px; font-size: 1em; text-align: center;">Copyright © 2010-2018 www.jeasyui.com</div>
+</div>
+</body>
+<script type="text/javascript">
+    $('#themeSelector').combobox({
+        onChange: function (newValue) {
+            var theme = newValue;
+            if (theme == null) {
+                theme = 'bootstrap';
+            }
+            var themeUrl = 'lib/themes/' + theme + '/easyui.css';
+            $('#theme').attr('href', themeUrl);
+        }
+    });
+</script>
+</html>
